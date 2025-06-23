@@ -1,60 +1,78 @@
-<p align="center">
-    <a href="https://github.com/yiisoft" target="_blank">
-        <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
-    </a>
-    <h1 align="center">Yii 2 Advanced Project Template</h1>
-    <br>
-</p>
+# Backend Server for Cat Lovers Mobile App – Node.js + TypeScript
 
-Yii 2 Advanced Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
-developing complex Web applications with multiple tiers.
+This repository contains the backend server for a mobile app developed by **Globalbit**, designed for a global community of cat lovers.  
+The app enables users to share content, track their pets, and connect through a social, location-based experience — powered by a secure, scalable API.
 
-The template includes three tiers: front end, back end, and console, each of which
-is a separate Yii application.
+---
 
-The template is designed to work in a team development environment. It supports
-deploying the application in different environments.
+## 🐾 App Purpose
 
-Documentation is at [docs/guide/README.md](docs/guide/README.md).
+The backend supports features such as:
+- 🐱 User registration and profile customization
+- 📸 Upload and comment on cat photos
+- 📍 Geo-tagging favorite places (vets, parks, shelters)
+- ❤️ Like, follow, and message other users
+- 🎯 Personalized content and activity feeds
 
-[![Latest Stable Version](https://poser.pugx.org/yiisoft/yii2-app-advanced/v/stable.png)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Total Downloads](https://poser.pugx.org/yiisoft/yii2-app-advanced/downloads.png)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Build Status](https://travis-ci.org/yiisoft/yii2-app-advanced.svg?branch=master)](https://travis-ci.org/yiisoft/yii2-app-advanced)
+---
 
-DIRECTORY STRUCTURE
--------------------
+## 🧰 Tech Stack
 
-```
-common
-    config/              contains shared configurations
-    mail/                contains view files for e-mails
-    models/              contains model classes used in both backend and frontend
-    tests/               contains tests for common classes    
-console
-    config/              contains console configurations
-    controllers/         contains console controllers (commands)
-    migrations/          contains database migrations
-    models/              contains console-specific model classes
-    runtime/             contains files generated during runtime
-backend
-    assets/              contains application assets such as JavaScript and CSS
-    config/              contains backend configurations
-    controllers/         contains Web controller classes
-    models/              contains backend-specific model classes
-    runtime/             contains files generated during runtime
-    tests/               contains tests for backend application    
-    views/               contains view files for the Web application
-    web/                 contains the entry script and Web resources
-frontend
-    assets/              contains application assets such as JavaScript and CSS
-    config/              contains frontend configurations
-    controllers/         contains Web controller classes
-    models/              contains frontend-specific model classes
-    runtime/             contains files generated during runtime
-    tests/               contains tests for frontend application
-    views/               contains view files for the Web application
-    web/                 contains the entry script and Web resources
-    widgets/             contains frontend widgets
-vendor/                  contains dependent 3rd-party packages
-environments/            contains environment-based overrides
-```
+- **Language**: TypeScript (Node.js)
+- **Framework**: Express.js
+- **Database**: PostgreSQL / MongoDB
+- **Storage**: AWS S3 for media
+- **Authentication**: JWT + OAuth2 (Google/Apple)
+- **Real-Time**: WebSocket or Socket.IO for chat and activity feed
+- **Deployment**: Docker, GitHub Actions, scalable on AWS/GCP
+
+---
+
+## 🔒 Security & Performance
+
+- Rate-limited APIs
+- Role-based access control (admin, moderator, user)
+- Secure image upload & validation
+- GDPR-compliant user data management
+
+---
+
+## 🧩 Key Modules
+
+- `/routes` – Auth, users, pets, posts, messages
+- `/services` – Image handling, notifications, activity tracking
+- `/models` – Database schema definitions
+- `/sockets` – WebSocket events and channel handlers
+
+---
+
+## 🏗 Built by Globalbit
+
+**Globalbit** is an award-winning software development company based in Israel, with extensive experience in building **social platforms**, **niche communities**, and **real-time mobile ecosystems**.
+
+We serve over **200 million users** globally through platforms we’ve built across:
+- 🏥 Health & Lifestyle
+- 🛍️ Consumer Apps & Retail
+- 📲 Mobile-first Social Experiences
+
+---
+
+## 📎 Getting Started
+
+```bash
+git clone https://github.com/globalbit/cat-lovers-backend.git
+cd cat-lovers-backend
+cp .env.example .env
+npm install
+npm run dev
+Swagger API docs are available at /api/docs.
+
+
+Whether it’s for pets, people, or global platforms — Globalbit builds mobile-first systems that scale and connect.
+
+## 📞 Let’s Build Secure, Resilient Communication Together
+
+Globalbit builds robust mobile platforms for challenging environments — from public safety to connected mobility.
+
+📩 [info@globalbit.co.il](mailto:info@globalbit.co.il)  
+🌐 [globalbit.co.il](https://globalbit.co.il)
